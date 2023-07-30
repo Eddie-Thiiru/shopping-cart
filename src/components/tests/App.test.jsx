@@ -10,7 +10,7 @@ describe("App Component", () => {
   it("should render header", () => {
     render(<App />, { wrapper: BrowserRouter });
 
-    expect(screen.getByText(/buybuybuy/i)).toBeInTheDocument();
+    expect(screen.getByText(/ultimategames/i)).toBeInTheDocument();
     expect(screen.getByText(/home/i)).toBeInTheDocument();
     expect(screen.getByText(/products/i)).toBeInTheDocument();
     expect(screen.getByText(/shop/i)).toBeInTheDocument();
@@ -27,7 +27,7 @@ describe("App Component", () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByText(/homepage content/i)).toBeInTheDocument();
+    expect(screen.getByText(/action games/i)).toBeInTheDocument();
   });
 
   it("should render footer", () => {

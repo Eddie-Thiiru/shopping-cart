@@ -1,0 +1,39 @@
+.homepage {
+  display: grid;
+  grid-template-rows: 850px 850px 850px;
+}
+
+.adventureSection {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.groupSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.actionSection,
+.rpgSection,
+.strategySection,
+.platformSection,
+.racingSection,
+.sportsSection {
+  display: grid;
+  grid-template-rows: 1fr 100px;
+}
+
+.adventureSection > div {
+  height: 90%;
+  width: 80%;
+}
+
+.adventureSection img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  /* filter: opacity(0.5); */
+}

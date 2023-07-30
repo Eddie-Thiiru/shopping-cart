@@ -5,6 +5,25 @@
   grid-template-rows: 80px 1fr 80px;
 }
 
+.header {
+  position: sticky;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: black;
+}
+
+.mainSection {
+  padding: 10px;
+}
+
+.footer {
+  padding: 10px;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

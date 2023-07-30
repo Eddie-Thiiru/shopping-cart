@@ -1,0 +1,210 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Homepage > renders homepage component 1`] = `
+<div>
+  <div
+    class="homepage"
+  >
+    <div
+      class="aboutSection"
+    >
+      <div
+        class="aboutTitle"
+      >
+        <h2>
+          Welcome
+        </h2>
+        <h2>
+          Video Game Store
+        </h2>
+      </div>
+      <p>
+        Browse thousands of games in our collection, from action packed games to the. You want it? We got it!
+      </p>
+      <div>
+        <h3>
+          Game Collection
+        </h3>
+        <p>
+          10,000+
+        </p>
+      </div>
+      <div
+        class="platforms"
+      >
+        <div
+          class="nintendo"
+        >
+          <img />
+          <p>
+            Nintendo
+          </p>
+        </div>
+        <div
+          class="playstation"
+        >
+          <img />
+          <div>
+            PlayStation
+          </div>
+        </div>
+        <div
+          class="xbox"
+        >
+          <img />
+          <div>
+            XBOX
+          </div>
+        </div>
+        <div
+          class="pc"
+        >
+          <img />
+          <div>
+            PC
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="adventureSection"
+    >
+      <h2>
+        Action-Adventure Games
+      </h2>
+      <div
+        class="sectionImage"
+      >
+        <img
+          alt=""
+          src="/jason.png"
+        />
+      </div>
+    </div>
+    <div
+      class="groupSection"
+    >
+      <div
+        class="actionSection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            Action Games
+          </h2>
+          <p />
+        </div>
+      </div>
+      <div
+        class="rpgSection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            RPG Games
+          </h2>
+          <p />
+        </div>
+      </div>
+      <div
+        class="strategySection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            Strategy Games
+          </h2>
+          <p />
+        </div>
+      </div>
+      <div
+        class="platformSection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            Platform Games
+          </h2>
+          <p />
+        </div>
+      </div>
+      <div
+        class="racingSection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            Racing Games
+          </h2>
+          <p />
+        </div>
+      </div>
+      <div
+        class="sportsSection"
+      >
+        <div
+          class="sectionImage"
+        >
+          <img
+            alt=""
+            src=""
+          />
+        </div>
+        <div
+          class="sectionDescription"
+        >
+          <h2>
+            Sports Games
+          </h2>
+          <p />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

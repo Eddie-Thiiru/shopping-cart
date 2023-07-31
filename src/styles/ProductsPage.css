@@ -1,0 +1,38 @@
+.productsPage {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 100px 1fr;
+  align-items: center;
+}
+
+.productsPage h1,
+.collection {
+  grid-column: 2 / 3;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.productCard {
+  height: 350px;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: 10px;
+}
+
+.productCard img {
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

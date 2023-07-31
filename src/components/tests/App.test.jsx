@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter, MemoryRouter, Routes, Route } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
 import App from "../../App";
 import MainSection from "../MainSection";
 import Homepage from "../Homepage";

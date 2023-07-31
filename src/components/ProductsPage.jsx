@@ -1,41 +1,51 @@
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { useProductsData } from "./DataProvider";
+import "../styles/ProductsPage.css";
 
-const ProductsPage = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+const priceData = [
+  59.99, 59.99, 49.99, 29.99, 49.99, 29.99, 69.99, 10.0, 59.99, 59.99, 59.99,
+  29.99, 29.99, 69.99, 59.99,
+];
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          // " https://api.rawg.io/api/games/3498?key=ded6236dee784a49946f45a75db16ec8",
-          { mode: "cors" },
-        );
-        const data = await response.json();
-
-        if (!data.error) {
-          console.log(data);
-          setData(data.background_image);
-        } else {
-          throw new Error(data.error);
-        }
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const Card = ({ imageURL, name, price }) => {
   return (
-    <div>
-      <img src={data} />
-      <h1>Products Page content</h1>
+    <div className="productCard">
+      <img src={imageURL} alt={`${name} image`}></img>
+      <div className="cardDescription">
+        <p>{name}</p>
+        <p>{`$${price}`}</p>
+      </div>
     </div>
   );
+};
+
+const ProductsPage = () => {
+  const data = useProductsData();
+  const array = Object.values(data);
+
+  return (
+    <div className="productsPage">
+      <h1>All Games</h1>
+      <div className="collection">
+        {array.map((item, index) => {
+          return (
+            <Card
+              key={item.data.uniqueId}
+              imageURL={item.data.imageURL}
+              name={item.data.name}
+              price={priceData[index]}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+Card.propTypes = {
+  imageURL: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
 };
 
 export default ProductsPage;

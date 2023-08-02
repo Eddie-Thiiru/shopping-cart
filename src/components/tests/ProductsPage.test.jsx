@@ -8,7 +8,7 @@ vi.mock("../DataProvider");
 const data = {
   product: {
     data: {
-      imageURL: "https://exampleapi.com/product",
+      imageURL: "https://example.com/api/product/1111",
       name: "Grand Theft Auto 5",
       uniqueId: 1111,
     },
@@ -21,7 +21,6 @@ describe("ProductsPage", () => {
     mockFactory.mockImplementation(() => data);
 
     render(<ProductsPage />);
-    screen.debug();
 
     expect(screen.getByText(/grand theft auto 5/i)).toBeInTheDocument();
     expect(screen.getByText(/59.99/i)).toBeInTheDocument();

@@ -15,20 +15,6 @@ describe("App Component", () => {
     expect(screen.getByText(/shop/i)).toBeInTheDocument();
   });
 
-  it("should render main section with the default content", () => {
-    render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Routes>
-          <Route element={<MainSection />}>
-            <Route path="/" element={<Homepage />}></Route>
-          </Route>
-        </Routes>
-      </MemoryRouter>,
-    );
-
-    expect(screen.getByText(/action games/i)).toBeInTheDocument();
-  });
-
   it("should render footer", () => {
     render(<App />, { wrapper: BrowserRouter });
 

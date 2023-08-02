@@ -1,15 +1,14 @@
-import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import About from "./About";
 import "../styles/Homepage.css";
-import png from "../../jason.png";
+import { useProductsData } from "./DataProvider";
 
 const Adventure = ({ background }) => {
   return (
     <div className="adventureSection">
       <h2>Action-Adventure Games</h2>
       <div className="sectionImage">
-        <img src={png} alt="" />
+        <img src={background} alt="red dead redemption background image" />
       </div>
     </div>
   );
@@ -19,7 +18,7 @@ const Action = ({ background }) => {
   return (
     <div className="actionSection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="grand theft auto 5 background image" />
       </div>
       <div className="sectionDescription">
         <h2>Action Games</h2>
@@ -33,7 +32,7 @@ const RPG = ({ background }) => {
   return (
     <div className="rpgSection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="the witcher 3 background image" />
       </div>
       <div className="sectionDescription">
         <h2>RPG Games</h2>
@@ -47,7 +46,7 @@ const Strategy = ({ background }) => {
   return (
     <div className="strategySection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="civilization 6 background image" />
       </div>
       <div className="sectionDescription">
         <h2>Strategy Games</h2>
@@ -61,7 +60,7 @@ const Platform = ({ background }) => {
   return (
     <div className="platformSection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="hollow knight background image" />
       </div>
       <div className="sectionDescription">
         <h2>Platform Games</h2>
@@ -75,7 +74,7 @@ const Racing = ({ background }) => {
   return (
     <div className="racingSection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="forza 5 background image" />
       </div>
       <div className="sectionDescription">
         <h2>Racing Games</h2>
@@ -85,14 +84,14 @@ const Racing = ({ background }) => {
   );
 };
 
-const Sports = ({ background }) => {
+const Puzzle = ({ background }) => {
   return (
-    <div className="sportsSection">
+    <div className="puzzleSection">
       <div className="sectionImage">
-        <img src={background} alt="" />
+        <img src={background} alt="portal 2 background image" />
       </div>
       <div className="sectionDescription">
-        <h2>Sports Games</h2>
+        <h2>Puzzle Games</h2>
         <p></p>
       </div>
     </div>
@@ -104,53 +103,27 @@ const Group = ({ children }) => {
 };
 
 const Homepage = () => {
-  const [data, setData] = useState({
-    actionURL: "",
-    adventureURL: "",
-    rpgURL: "",
-    strategyURL: "",
-    platformURL: "",
-    racingURL: "",
-    sportsURL: "",
-  });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch();
-        // " https://api.rawg.io/api/games/3498?key=ded6236dee784a49946f45a75db16ec8",
-        // { mode: "cors" },
-        const data = await response.json();
-
-        if (!data.error) {
-          console.log(data);
-          setData(data.background_image);
-        } else {
-          throw new Error(data.error);
-        }
-      } catch (error) {
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const {
+    redDeadRedemption2,
+    gta5,
+    witcher3,
+    civ6,
+    hollowKnight,
+    forza5,
+    portal2,
+  } = useProductsData();
 
   return (
     <div className="homepage">
       <About />
-      <Adventure />
+      <Adventure background={redDeadRedemption2.data.imageURL} />
       <Group>
-        <Action background={data.actionURL} />
-        <RPG background={data.rpgURL} />
-        <Strategy background={data.strategyURL} />
-        <Platform background={data.platformURL} />
-        <Racing background={data.racingURL} />
-        <Sports background={data.sportsURL} />
+        <Action background={gta5.data.imageURL} />
+        <RPG background={witcher3.data.imageURL} />
+        <Strategy background={civ6.data.imageURL} />
+        <Platform background={hollowKnight.data.imageURL} />
+        <Racing background={forza5.data.imageURL} />
+        <Puzzle background={portal2.data.imageURL} />
       </Group>
     </div>
   );
@@ -180,7 +153,7 @@ Racing.propTypes = {
   background: PropTypes.string,
 };
 
-Sports.propTypes = {
+Puzzle.propTypes = {
   background: PropTypes.string,
 };
 

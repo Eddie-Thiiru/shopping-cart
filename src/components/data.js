@@ -1,5 +1,14 @@
 import { useState, useEffect } from "react";
 
+// setData({
+//   imageURL: response.image,
+//   name: response.name,
+//   uniqueId: id,
+//   metascore: response.metacritic ? is a number
+//   platforms: response.platforms ? is an array
+//   genre: response.genres ? is an array
+// });
+
 const useData = (id) => {
   const [data, setData] = useState({ imageURL: "", name: "", uniqueId: "" });
   const [error, setError] = useState(false);

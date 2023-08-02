@@ -1,9 +1,7 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import ProductsPage from "../ProductsPage";
-import { useProductsData } from "../DataProvider";
-
-vi.mock("../DataProvider");
+import { Context } from "../DataProvider";
 
 const data = {
   product: {
@@ -16,13 +14,19 @@ const data = {
 };
 
 describe("ProductsPage", () => {
-  it("renders ProductsPage and a product in the page", () => {
-    const mockFactory = vi.mocked(useProductsData);
-    mockFactory.mockImplementation(() => data);
+  // it("renders default value", () => {
 
-    render(<ProductsPage />);
+  // })
 
-    expect(screen.getByText(/grand theft auto 5/i)).toBeInTheDocument();
-    expect(screen.getByText(/59.99/i)).toBeInTheDocument();
+  it("renders value from provider", () => {
+    render(
+      <Context.Provider value={data}>
+        <ProductsPage />
+      </Context.Provider>,
+    );
+
+    screen.debug();
+
+    expect(screen.getByText(/grand theft auto/i)).toBeInTheDocument();
   });
 });

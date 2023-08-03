@@ -1,0 +1,32 @@
+.gamesCollection h1 {
+  height: 80px;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.productCard {
+  height: 350px;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: 10px;
+}
+
+.productCard img {
+  min-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.cardDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}

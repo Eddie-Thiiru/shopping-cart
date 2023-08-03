@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import About from "./About";
 import "../styles/Homepage.css";
-import { useProductsData } from "./DataProvider";
+import { useProductsData } from "./utils/dataContext";
 
 const Adventure = ({ background }) => {
   return (

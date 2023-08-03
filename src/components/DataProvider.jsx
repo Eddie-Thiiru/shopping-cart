@@ -1,6 +1,6 @@
-import { useContext, createContext } from "react";
+import { createContext } from "react";
 import PropTypes from "prop-types";
-import useData from "./data";
+import useData from "./utils/data";
 
 const Context = createContext();
 
@@ -60,6 +60,4 @@ DataProvider.propTypes = {
   children: PropTypes.object,
 };
 
-const useProductsData = () => useContext(Context);
-
-export { DataProvider, useProductsData, Context };
+export { DataProvider, Context };

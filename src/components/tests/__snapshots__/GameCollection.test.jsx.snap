@@ -17,7 +17,7 @@ exports[`renders a game card with data from a provider  1`] = `
       >
         <img
           alt="Grand Theft Auto 5 image"
-          src="https://example.com/api/product/1111"
+          src="https://games-endpoint.example/image"
         />
         <div
           class="cardDescription"

@@ -3,26 +3,18 @@ import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import Overview from "../GameOverview";
 
-const data = {
-  data: {
-    imageURL: "https://example.com/api/product/1111",
-    name: "Grand Theft Auto 5",
-    metaScore: 92,
-    genre: [{ name: "Action" }, { name: "Adventure" }],
-    platforms: [
-      { platform: { name: "PC" } },
-      { platform: { name: "PlayStation" } },
-      { platform: { name: "XBOX" } },
-    ],
-    released: "march 15, 2013",
-    price: 29.99,
-  },
-};
+describe("Game Overview", () => {
+  it("renders Overview while using useLocation data", async () => {
+    // Get initial fetch data that will be passed on by parent to the Overview
+    const response = await fetch(
+      "https://games-endpoint.example/api/games/1111",
+    );
+    const data = await response.json();
 
-describe("Game overview", () => {
-  it("renders overview while using useLocation data", () => {
+    const gameData = data.game;
+
     const { container } = render(
-      <MemoryRouter initialEntries={[{ state: data }]}>
+      <MemoryRouter initialEntries={[{ state: gameData }]}>
         <Overview />
       </MemoryRouter>,
     );

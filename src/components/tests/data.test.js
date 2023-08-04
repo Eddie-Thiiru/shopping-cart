@@ -1,41 +1,35 @@
-import { describe, it, expect, vi } from "vitest";
-import useData from "../data";
-
-vi.mock("../data", () => {
-  return {
-    default: vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(data),
-      }),
-    ),
-  };
-});
-
-const data = {
-  product: {
-    data: {
-      imageURL: "https://example.com/api/product/1111",
-      name: "Grand Theft Auto 5",
-      metaScore: 92,
-      genre: [{ name: "Action" }, { name: "Adventure" }],
-      platforms: [
-        { platform: { name: "PC" } },
-        { platform: { name: "PlayStation" } },
-        { platform: { name: "XBOX" } },
-      ],
-      released: "march 15, 2013",
-      price: 29.99,
-      slug: "grand-theft-auto-v",
-    },
-  },
-};
+import { describe, it, expect } from "vitest";
+import { rest } from "msw";
+import { server } from "../mocks/server";
 
 describe("Custom fetch hook", () => {
-  it("returns product data", async () => {
-    const mockFetch = vi.mocked(useData());
+  it("returns product data on successful fetch", async () => {
+    const response = await fetch(
+      "https://games-endpoint.example/api/games/1111",
+    );
 
-    const gameData = await mockFetch;
+    const data = await response.json();
 
-    expect(gameData).to(data);
+    expect(response.status).toEqual(200);
+    expect(data.game.data.name).toMatch("Grand Theft Auto 5");
+  });
+
+  it("returns error on unsuccessful fetch", async () => {
+    server.use(
+      rest.get(
+        "https://games-endpoint.example/api/games/1111",
+        (req, res, ctx) => {
+          return res(ctx.status(400), ctx.json({ message: "server error" }));
+        },
+      ),
+    );
+
+    const response = await fetch(
+      "https://games-endpoint.example/api/games/1111",
+    );
+
+    const data = await response.json();
+
+    expect(data.message).toBe("server error");
   });
 });

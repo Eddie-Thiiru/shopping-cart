@@ -31,14 +31,13 @@ const useData = (id) => {
     metaScore: "",
     platforms: [],
     genre: [],
-    release: "",
+    released: "",
     price: "",
     slug: "",
   });
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    // fetch("https://rickandmortyapi.com/api/character/779")
     fetch(
       `https://api.rawg.io/api/games/${id}?key=ded6236dee784a49946f45a75db16ec8`,
       { mode: "cors" },
@@ -61,7 +60,7 @@ const useData = (id) => {
           metaScore: response.metacritic,
           platforms: response.platforms,
           genre: response.genres,
-          release: response.released,
+          released: response.released,
           price: gamePrice,
           slug: response.slug,
         });

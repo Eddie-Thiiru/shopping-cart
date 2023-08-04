@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders a game card with data from a provider  1`] = `
+<div>
+  <div
+    class="gamesCollection"
+  >
+    <h1>
+      All Games
+    </h1>
+    <div
+      class="collection"
+    >
+      <div
+        class="productCard"
+        id="1111"
+      >
+        <img
+          alt="Grand Theft Auto 5 image"
+          src="https://example.com/api/product/1111"
+        />
+        <div
+          class="cardDescription"
+        >
+          <p>
+            Grand Theft Auto 5
+          </p>
+          <p>
+            $29.99
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

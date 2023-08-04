@@ -1,0 +1,15 @@
+.gameOverview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.gameDetails {
+  display: grid;
+  grid-template-rows: 1fr 200px 150px;
+  gap: 20px;
+}
+
+.gameDetails img {
+  max-width: 100%;
+  min-height: 100%;
+}

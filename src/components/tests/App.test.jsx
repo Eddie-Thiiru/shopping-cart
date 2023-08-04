@@ -1,24 +1,14 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter, MemoryRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "../../App";
-import MainSection from "../MainSection";
-import Homepage from "../Homepage";
 
 describe("App Component", () => {
-  it("should render header", () => {
-    render(<App />, { wrapper: BrowserRouter });
+  it("should render app", () => {
+    const { container } = render(<App />, { wrapper: BrowserRouter });
+    screen.debug();
 
-    expect(screen.getByText(/ultimategames/i)).toBeInTheDocument();
-    expect(screen.getByText(/home/i)).toBeInTheDocument();
-    expect(screen.getByText(/products/i)).toBeInTheDocument();
-    expect(screen.getByText(/shop/i)).toBeInTheDocument();
-  });
-
-  it("should render footer", () => {
-    render(<App />, { wrapper: BrowserRouter });
-
-    expect(screen.getByText(/test/i)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 
   // it("renders home content after navigation click", async () => {

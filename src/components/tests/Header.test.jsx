@@ -7,8 +7,10 @@ describe("Header Component", () => {
   it("should render 'Home', 'Products' and 'Shop' links", () => {
     render(<Header />, { wrapper: BrowserRouter });
 
+    screen.debug();
+
     const link1 = screen.getByRole("link", { name: "Home" });
-    const link2 = screen.getByRole("link", { name: "Products" });
+    const link2 = screen.getByRole("link", { name: "Browse" });
     const link3 = screen.getByRole("link", { name: "Shop" });
 
     expect(link1).toBeInTheDocument();

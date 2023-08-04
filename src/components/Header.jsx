@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <div className="header">
       <h1>UltimateGames</h1>
-      <div>
+      <div className="nav">
         <Link to="homepage">Home</Link>
-        <Link to="products">Products</Link>
+        <Link to="games/collection">Browse</Link>
         <Link to="shop">Shop</Link>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Homepage from "../Homepage";
 import { Context } from "../DataProvider";
 
 // test sections are rendered
-// test images are renderd
+
 // test descriptions are rendered
 
 const data = {
@@ -27,7 +27,7 @@ describe("Homepage", () => {
 
     screen.debug();
 
-    expect(screen.getByText(/video game store/i)).toBeInTheDocument();
+    expect(screen.getByText(/welcome/i)).toBeInTheDocument();
     expect(screen.getByText(/action-adventure games/i)).toBeInTheDocument();
     expect(screen.getByText(/action games/i)).toBeInTheDocument();
     expect(screen.getByText(/rpg games/i)).toBeInTheDocument();

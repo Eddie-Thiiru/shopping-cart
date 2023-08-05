@@ -1,0 +1,34 @@
+.shopPage {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 50px 1fr;
+}
+
+.shopPage > div {
+  grid-column: 2 / 3;
+}
+
+.emptyCart {
+  grid-row: 2 / 3;
+}
+
+.cart {
+  display: grid;
+  grid-template-rows: 50px 1fr 150px;
+}
+
+.cartItemCard {
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cartItemWrapperOne {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cartItemWrapperOne img {
+  max-width: 50%;
+}

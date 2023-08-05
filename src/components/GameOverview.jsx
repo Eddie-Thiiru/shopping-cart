@@ -1,9 +1,18 @@
-import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { CartContext } from "../App";
 import "../styles/GameOverview.css";
 
 const Overview = () => {
+  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
   const location = useLocation();
   const data = location.state.data;
+
+  const handleBuyClicks = () => {
+    addToCart(data);
+    navigate("/cart");
+  };
 
   return (
     <div className="gameOverview">
@@ -32,12 +41,18 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      <div className="shopSection">
+      <div className="gameDetailsTwo">
         <h2>{data.name}</h2>
-        <p>{data.price}</p>
-        <div>
-          <button type="button">ADD TO CART</button>
-          <button type="button">BUY NOW</button>
+        <div className="shopSection">
+          <p>{data.price}</p>
+          <div className="cartBuy">
+            <button type="button" onClick={() => addToCart(data)}>
+              ADD TO CART
+            </button>
+            <button type="button" onClick={handleBuyClicks}>
+              BUY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>

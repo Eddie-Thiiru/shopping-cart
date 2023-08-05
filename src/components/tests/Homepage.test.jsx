@@ -18,14 +18,12 @@ const data = {
 };
 
 describe("Homepage", () => {
-  it("should render all sections", () => {
+  it("should render all homepage sections", () => {
     render(
       <Context.Provider value={data}>
         <Homepage />
       </Context.Provider>,
     );
-
-    screen.debug();
 
     expect(screen.getByText(/welcome/i)).toBeInTheDocument();
     expect(screen.getByText(/action-adventure games/i)).toBeInTheDocument();

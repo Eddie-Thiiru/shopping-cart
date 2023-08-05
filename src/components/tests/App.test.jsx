@@ -1,11 +1,15 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import App from "../../App";
 
 describe("App Component", () => {
   it("should render app", () => {
-    const { container } = render(<App />, { wrapper: BrowserRouter });
+    const { container } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>,
+    );
     screen.debug();
 
     expect(container).toMatchSnapshot();
@@ -14,13 +18,16 @@ describe("App Component", () => {
   // it("renders home content after navigation click", async () => {
   //   const user = userEvent.setup();
 
-  //   render(<App />, { wrapper: BrowserRouter });
+  //   render(
+  //     <MemoryRouter initialEntries={[{ pathname: "/" }]}>
+  //       <App />
+  //     </MemoryRouter>,
+  //   );
 
   //   const link = screen.getByRole("link", { name: "Home" });
 
   //   await user.click(link);
 
   //   screen.debug();
-
   // });
 });

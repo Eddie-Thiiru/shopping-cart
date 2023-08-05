@@ -12,7 +12,7 @@ exports[`renders a game card with data from a provider  1`] = `
       class="collection"
     >
       <div
-        class="productCard"
+        class="gameCard"
         id="1111"
       >
         <img

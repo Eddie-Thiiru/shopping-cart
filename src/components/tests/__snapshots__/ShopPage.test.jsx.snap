@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Shop page > should render shop page component 1`] = `
+<div>
+  <div
+    class="shopPage"
+  >
+    <div
+      class="pageTitle"
+    >
+      <h2>
+        Cart
+      </h2>
+    </div>
+    <div
+      class="cart"
+    >
+      <div
+        class="cartHeader"
+      >
+        <h3>
+          Games
+        </h3>
+        <h3>
+          price
+        </h3>
+      </div>
+      <div
+        class="cartItemCard"
+      >
+        <div
+          class="cartItemWrapperOne"
+        >
+          <img
+            alt="Grand Theft Auto 5 background image"
+            src="https://games-endpoint.example/image"
+          />
+          <p>
+            name name name
+          </p>
+        </div>
+        <div
+          class="cartItemWrapperTwo"
+        >
+          <p>
+            29.99
+          </p>
+          <button
+            class="removeGame"
+            type="button"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <div
+        class="cartTotalWrapper"
+      >
+        <h3>
+          Grand total
+        </h3>
+        <p>
+          29.99
+        </p>
+        <button
+          class="paymentBtn"
+          type="button"
+        >
+          Continue to Payment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

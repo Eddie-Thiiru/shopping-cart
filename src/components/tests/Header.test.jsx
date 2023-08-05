@@ -11,7 +11,7 @@ describe("Header Component", () => {
 
     const link1 = screen.getByRole("link", { name: "Home" });
     const link2 = screen.getByRole("link", { name: "Browse" });
-    const link3 = screen.getByRole("link", { name: "Shop" });
+    const link3 = screen.getByRole("link", { name: "Cart" });
 
     expect(link1).toBeInTheDocument();
     expect(link2).toBeInTheDocument();

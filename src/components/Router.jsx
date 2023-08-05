@@ -22,7 +22,7 @@ const Router = () => {
             { path: "game", element: <Overview /> },
           ],
         },
-        { path: "shop", element: <ShopPage /> },
+        { path: "cart", element: <ShopPage /> },
       ],
     },
   ]);

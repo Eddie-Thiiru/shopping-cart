@@ -5,7 +5,7 @@ import "../styles/GamesCollection.css";
 
 const Card = ({ id, imageURL, name, price, onClick }) => {
   return (
-    <div className="productCard" id={id} onClick={onClick}>
+    <div className="gameCard" id={id} onClick={onClick}>
       <img src={imageURL} alt={`${name} image`}></img>
       <div className="cardDescription">
         <p>{name}</p>
@@ -64,7 +64,7 @@ Card.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   onClick: PropTypes.func,
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default Collection;

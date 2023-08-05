@@ -1,50 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App Component > should render 1`] = `
-<div>
-  <div
-    id="App"
-  >
-    <div
-      class="header"
-    >
-      <h1>
-        UltimateGames
-      </h1>
-      <div
-        class="nav"
-      >
-        <a
-          href="/homepage"
-        >
-          Home
-        </a>
-        <a
-          href="/games/collection"
-        >
-          Browse
-        </a>
-        <a
-          href="/shop"
-        >
-          Shop
-        </a>
-      </div>
-    </div>
-    <div
-      class="mainSection"
-    />
-    <div
-      class="footer"
-    >
-      <p>
-        test test test test test
-      </p>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`App Component > should render app 1`] = `
 <div>
   <div
@@ -69,11 +24,16 @@ exports[`App Component > should render app 1`] = `
         >
           Browse
         </a>
-        <a
-          href="/shop"
-        >
-          Shop
-        </a>
+        <div>
+          <a
+            href="/cart"
+          >
+            Cart
+          </a>
+          <span>
+            0
+          </span>
+        </div>
       </div>
     </div>
     <div

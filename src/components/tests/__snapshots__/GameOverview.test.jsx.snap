@@ -68,118 +68,31 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
       </div>
     </div>
     <div
-      class="shopSection"
+      class="gameDetailsTwo"
     >
       <h2>
         Grand Theft Auto 5
       </h2>
-      <p>
-        29.99
-      </p>
-      <div>
-        <button
-          type="button"
-        >
-          ADD TO CART
-        </button>
-        <button
-          type="button"
-        >
-          BUY NOW
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Game overview > renders overview while using useLocation data 1`] = `
-<div>
-  <div
-    class="gameOverview"
-  >
-    <div
-      class="gameDetails"
-    >
-      <img
-        alt="Grand Theft Auto 5 background image"
-        src="https://example.com/api/product/1111"
-      />
       <div
-        class="gameAbout"
+        class="shopSection"
       >
-        <p />
-      </div>
-      <div
-        class="gameMeta"
-      >
+        <p>
+          29.99
+        </p>
         <div
-          class="gameGenreScore"
+          class="cartBuy"
         >
-          <div
-            class="genre"
+          <button
+            type="button"
           >
-            <h4>
-              Genre
-            </h4>
-            <p>
-              Action 
-              Adventure 
-               
-            </p>
-          </div>
-          <div
-            class="metaScore"
+            ADD TO CART
+          </button>
+          <button
+            type="button"
           >
-            <h4>
-              Metascore
-            </h4>
-            <p>
-              92
-            </p>
-          </div>
+            BUY NOW
+          </button>
         </div>
-        <div
-          class="releaseDate"
-        >
-          <h4>
-            Release Date
-          </h4>
-          <p>
-            march 15, 2013
-          </p>
-        </div>
-        <div
-          class="gamePlatforms"
-        >
-          <p>
-            PC 
-            PlayStation 
-            XBOX 
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="shopSection"
-    >
-      <h2>
-        Grand Theft Auto 5
-      </h2>
-      <p>
-        29.99
-      </p>
-      <div>
-        <button
-          type="button"
-        >
-          ADD TO CART
-        </button>
-        <button
-          type="button"
-        >
-          BUY NOW
-        </button>
       </div>
     </div>
   </div>

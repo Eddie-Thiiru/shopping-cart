@@ -10,14 +10,14 @@
   gap: 30px;
 }
 
-.productCard {
+.gameCard {
   height: 350px;
   display: grid;
   grid-template-rows: 4fr 1fr;
   gap: 10px;
 }
 
-.productCard img {
+.gameCard img {
   min-height: 100%;
   max-width: 100%;
   object-fit: cover;

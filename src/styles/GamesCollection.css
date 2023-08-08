@@ -1,17 +1,22 @@
+.gamesCollection {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
 .gamesCollection h1 {
   height: 80px;
 }
 
 .collection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 260px));
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
 }
 
 .gameCard {
-  height: 350px;
+  height: 380px;
   display: grid;
   grid-template-rows: 4fr 1fr;
   gap: 10px;

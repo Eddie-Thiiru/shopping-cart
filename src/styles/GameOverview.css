@@ -3,24 +3,42 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 50px 1fr;
+  column-gap: 10px;
 }
 
 .gameDetails {
   grid-column: 1 / 2;
   display: grid;
-  grid-template-rows: 1fr 200px 150px;
+  grid-template-rows: 3fr 1fr 1fr;
   gap: 20px;
 }
 
-.gameDetails img {
-  max-width: 100%;
-  min-height: 100%;
+.gameDetailsTwo {
+  height: 30%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
 }
 
-.gameDetailsTwo {
-  height: 50%;
+.gameMeta {
   display: grid;
-  grid-template-rows: 2fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.gameMeta > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gameMetaOne > div,
+.gameMetaTwo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .shopSection {
@@ -28,6 +46,20 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
+.cartBuy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .cartBuy button {
+  height: 100%;
   padding: 10px 20px;
+}
+
+.gameDetails img {
+  max-width: 100%;
+  min-height: 100%;
 }

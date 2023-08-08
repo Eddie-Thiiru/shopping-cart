@@ -2,15 +2,15 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 80px minmax(800px, 1fr) 300px;
+  grid-template-rows: 100px minmax(800px, 1fr) 300px;
 }
 
 .header {
   position: sticky;
-  height: 80px;
   width: 100%;
   top: 0;
-  background-color: black;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.8));
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -21,6 +21,9 @@
 
 .mainSection {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer {

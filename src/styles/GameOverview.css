@@ -1,9 +1,12 @@
 .gameOverview {
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-rows: 50px 1fr;
 }
 
 .gameDetails {
+  grid-column: 1 / 2;
   display: grid;
   grid-template-rows: 1fr 200px 150px;
   gap: 20px;

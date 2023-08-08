@@ -16,10 +16,11 @@ const Overview = () => {
 
   return (
     <div className="gameOverview">
+      <h2>Game Overview</h2>
       <div className="gameDetails">
         <img src={data.imageURL} alt={`${data.name} background image`}></img>
         <div className="gameAbout">
-          <p></p>
+          <p>{data.story}</p>
         </div>
         <div className="gameMeta">
           <div className="gameGenreScore">

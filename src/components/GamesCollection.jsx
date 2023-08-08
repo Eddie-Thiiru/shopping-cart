@@ -64,7 +64,7 @@ Card.propTypes = {
   name: PropTypes.string,
   price: PropTypes.number,
   onClick: PropTypes.func,
-  id: PropTypes.string,
+  id: PropTypes.number,
 };
 
 export default Collection;

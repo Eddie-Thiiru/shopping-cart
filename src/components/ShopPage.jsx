@@ -58,23 +58,26 @@ const ShopPage = () => {
         {cartData.length === 0 ? (
           <Empty />
         ) : (
-          <>
+          <div className="cartItemsContainer">
             <div className="cartHeader">
               <h3>Games</h3>
               <h3>price</h3>
             </div>
-            {cartData.map((item, index) => {
-              return (
-                <CartCard
-                  key={index}
-                  id={item.uniqueId}
-                  imageURL={item.imageURL}
-                  title={item.name}
-                  price={item.price}
-                  handleDelete={removeFromCart}
-                />
-              );
-            })}
+            <div className="cartItemsWrapper">
+              {cartData.map((item, index) => {
+                return (
+                  <CartCard
+                    key={index}
+                    id={item.uniqueId}
+                    imageURL={item.imageURL}
+                    title={item.name}
+                    price={item.price}
+                    handleDelete={removeFromCart}
+                  />
+                );
+              })}
+            </div>
+
             <div className="cartTotalWrapper">
               <h3>Grand total</h3>
               <p>{`$${parseFloat(totalPrice).toFixed(2)}`}</p>
@@ -82,7 +85,7 @@ const ShopPage = () => {
                 Continue to Payment
               </button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

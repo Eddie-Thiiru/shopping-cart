@@ -11,12 +11,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="footerLinksTwo">
-        <div className="footerAbout">
-          <p>About</p>
-          <p>Careers</p>
-          <p>Distribution</p>
-          <p>Support</p>
-        </div>
+        <ul className="footerAbout">
+          <li>About</li>
+          <li>Careers</li>
+          <li>Distribution</li>
+          <li>Support</li>
+        </ul>
         <div className="footerSocial">
           <img></img>
           <img></img>
@@ -25,11 +25,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="footerLinksThree">
-        <div className="footerPolicies">
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
-          <p>Refund Policy</p>
-        </div>
+        <ul className="footerPolicies">
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+          <li>Refund Policy</li>
+        </ul>
         <div className="footerCopyright">
           <p>
             <span>© </span> 2023 ultimateGames

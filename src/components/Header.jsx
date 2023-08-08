@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { PiHandbag } from "react-icons/pi";
 
 const Header = ({ cartItemsCount }) => {
   return (
@@ -9,8 +10,10 @@ const Header = ({ cartItemsCount }) => {
         <Link to="homepage">Home</Link>
         <Link to="games/collection">Browse</Link>
         <div>
-          <Link to="cart">Cart</Link>
-          <span>{cartItemsCount}</span>
+          <Link to="cart">
+            <PiHandbag size={"25px"} />
+            <span>{cartItemsCount}</span>
+          </Link>
         </div>
       </div>
     </div>

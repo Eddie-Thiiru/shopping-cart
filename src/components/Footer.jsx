@@ -1,3 +1,11 @@
+import rawgImg from "../images/rawgio.png";
+import {
+  FaFacebookSquare,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div className="footer">
@@ -5,7 +13,7 @@ const Footer = () => {
         <h2>ultimateGames</h2>
         <div className="apiHyperlink">
           <a href="https://rawg.io/apidocs">
-            <img></img>
+            <img src={rawgImg}></img>
             <p>RAWG API</p>
           </a>
         </div>
@@ -18,10 +26,10 @@ const Footer = () => {
           <li>Support</li>
         </ul>
         <div className="footerSocial">
-          <img></img>
-          <img></img>
-          <img></img>
-          <img></img>
+          <FaFacebookSquare color={"#00000"} />
+          <FaTwitter color={"#00000"} />
+          <FaInstagram color={"#00000"} />
+          <FaYoutube color={"#00000"} />
         </div>
       </div>
       <div className="footerLinksThree">

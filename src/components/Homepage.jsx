@@ -1,5 +1,14 @@
 import PropTypes from "prop-types";
 import { useProductsData } from "./utils/dataContext";
+import nintendoImg from "../images/nintendo.png";
+import playstationImg from "../images/playstation.svg";
+import xboxImg from "../images/xbox.svg";
+import pcImg from "../images/windows.png";
+import redDeadImg from "../images/red-read-redemption-2.png";
+import gtaImg from "../images/grand-theft-auto-v.svg";
+import witcherImg from "../images/witcher-3.png";
+import hollowImg from "../images/hollow-knight.png";
+import forzaImg from "../images/forza.svg";
 import "../styles/Homepage.css";
 
 // Add placeholder image before real image loads to prevent broken image
@@ -27,19 +36,18 @@ const About = () => {
       </div>
       <div className="platforms">
         <div className="nintendo">
-          <img></img>
+          <img src={nintendoImg} alt="nintendo logo"></img>
           <p>Nintendo</p>
         </div>
         <div className="playstation">
-          <img></img>
+          <img src={playstationImg} alt="playstation logo"></img>
           <div>PlayStation</div>
         </div>
         <div className="xbox">
-          <img></img>
-          <div>XBOX</div>
+          <img src={xboxImg} alt="xbox logo"></img>
         </div>
         <div className="pc">
-          <img></img>
+          <img src={pcImg} alt="windows 10 logo"></img>
           <div>PC</div>
         </div>
       </div>
@@ -53,7 +61,7 @@ const Adventure = ({ background }) => {
       <div className="sectionBackground">
         <img src={background} alt="" />
         <div className="adventureSecDescription">
-          <img></img>
+          <img src={redDeadImg} alt="rdr 2 logo"></img>
           <p>
             Experience the epic tale of outlaw Arthur Morgan and the infamous
             Van der Linde gang, on the run across America at the dawn of the
@@ -71,56 +79,84 @@ const Adventure = ({ background }) => {
   );
 };
 
-const Action = ({ background, title }) => {
+const Action = ({ background }) => {
   return (
     <div className="actionSection">
       <div className="sectionBackground">
-        <img src={background} alt="" />
+        <img className="gta5Background" src={background} alt="" />
         <div className="sectionDescription">
-          <img></img>
-          <h2>{title}</h2>
+          <img className="gta5Logo" src={gtaImg} alt="gta 5 logo"></img>
+          <div>
+            <p>$59.99</p>
+            <button type="button" className="actionSectionBtn">
+              BUY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const RPG = ({ background, title }) => {
+const RPG = ({ background }) => {
   return (
     <div className="rpgSection">
       <div className="sectionBackground">
-        <img src={background} alt="" />
+        <img className="witcherBackground" src={background} alt="" />
         <div className="sectionDescription">
-          <img></img>
-          <h2>{title}</h2>
+          <img
+            className="witcherLogo"
+            src={witcherImg}
+            alt="witcher 3 logo"
+          ></img>
+          <div>
+            <p>$59.99</p>
+            <button type="button" className="rpgSectionBtn">
+              BUY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const Platform = ({ background, title }) => {
+const Platform = ({ background }) => {
   return (
     <div className="platformSection">
       <div className="sectionBackground">
-        <img src={background} alt="" />
+        <img className="hollowKnightBackground" src={background} alt="" />
         <div className="sectionDescription">
-          <img></img>
-          <h2>{title}</h2>
+          <img
+            className="hollowKnightLogo"
+            src={hollowImg}
+            alt="hollow knight logo"
+          ></img>
+          <div>
+            <p>$59.99</p>
+            <button type="button" className="platformSectionBtn">
+              BUY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const Racing = ({ background, title }) => {
+const Racing = ({ background }) => {
   return (
     <div className="racingSection">
       <div className="sectionBackground">
-        <img src={background} alt="" />
+        <img className="forzaBackground" src={background} alt="" />
         <div className="sectionDescription">
-          <img></img>
-          <h2>{title}</h2>
+          <img className="forzaLogo" src={forzaImg} alt="forza 5 logo"></img>
+          <div>
+            <p>$59.99</p>
+            <button type="button" className="forzaSectionBtn">
+              BUY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -163,22 +199,18 @@ Adventure.propTypes = {
 
 Action.propTypes = {
   background: PropTypes.string,
-  title: PropTypes.string,
 };
 
 RPG.propTypes = {
   background: PropTypes.string,
-  title: PropTypes.string,
 };
 
 Platform.propTypes = {
   background: PropTypes.string,
-  title: PropTypes.string,
 };
 
 Racing.propTypes = {
   background: PropTypes.string,
-  title: PropTypes.string,
 };
 
 Group.propTypes = {

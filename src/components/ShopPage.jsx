@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import { CartContext } from "../App";
+import { RiDeleteBinLine } from "react-icons/ri";
 import "../styles/ShopPage.css";
 
 const CartCard = ({ imageURL, title, price, id, handleDelete }) => {
@@ -13,13 +14,16 @@ const CartCard = ({ imageURL, title, price, id, handleDelete }) => {
       </div>
       <div className="cartItemWrapperTwo">
         <p>{`$${price}`}</p>
-        <button
-          type="button"
-          className="removeGame"
-          onClick={() => handleDelete(id)}
-        >
-          Remove
-        </button>
+        <div>
+          <RiDeleteBinLine />
+          <button
+            type="button"
+            className="removeGame"
+            onClick={() => handleDelete(id)}
+          >
+            Remove
+          </button>
+        </div>
       </div>
     </div>
   );

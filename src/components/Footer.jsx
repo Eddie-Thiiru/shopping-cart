@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footerLinksOne">
-        <h2>ultimateGames</h2>
+        <h2>Game Vault</h2>
         <div className="apiHyperlink">
           <a href="https://rawg.io/apidocs">
             <img src={rawgImg}></img>

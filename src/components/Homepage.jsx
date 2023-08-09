@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useProductsData } from "./utils/dataContext";
-import nintendoImg from "../images/nintendo.png";
+import nintendoImg from "../images/nintendo.svg";
 import playstationImg from "../images/playstation.svg";
 import xboxImg from "../images/xbox.svg";
 import pcImg from "../images/windows.png";
@@ -41,14 +41,15 @@ const About = () => {
         </div>
         <div className="playstation">
           <img src={playstationImg} alt="playstation logo"></img>
-          <div>PlayStation</div>
+          <p>PlayStation</p>
         </div>
         <div className="xbox">
           <img src={xboxImg} alt="xbox logo"></img>
+          <p>XBOX</p>
         </div>
         <div className="pc">
           <img src={pcImg} alt="windows 10 logo"></img>
-          <div>PC</div>
+          <p>PC</p>
         </div>
       </div>
     </div>
@@ -87,7 +88,7 @@ const Action = ({ background }) => {
         <div className="sectionDescription">
           <img className="gta5Logo" src={gtaImg} alt="gta 5 logo"></img>
           <div>
-            <p>$59.99</p>
+            <p>$29.99</p>
             <button type="button" className="actionSectionBtn">
               BUY NOW
             </button>
@@ -110,7 +111,7 @@ const RPG = ({ background }) => {
             alt="witcher 3 logo"
           ></img>
           <div>
-            <p>$59.99</p>
+            <p>$49.99</p>
             <button type="button" className="rpgSectionBtn">
               BUY NOW
             </button>
@@ -133,7 +134,7 @@ const Platform = ({ background }) => {
             alt="hollow knight logo"
           ></img>
           <div>
-            <p>$59.99</p>
+            <p>$29.99</p>
             <button type="button" className="platformSectionBtn">
               BUY NOW
             </button>
@@ -166,7 +167,7 @@ const Racing = ({ background }) => {
 const Group = ({ children }) => {
   return (
     <div className="groupSection">
-      <h1>Top Sellers</h1>
+      <h2>Top Sellers</h2>
       <div className="homepageGroup">{children}</div>
     </div>
   );

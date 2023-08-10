@@ -40,7 +40,7 @@ const Collection = () => {
 
   return (
     <div className="gamesCollection">
-      <h1>All Games</h1>
+      <h2>All Games</h2>
       <div className="collection">
         {array.map((item, index) => {
           return (

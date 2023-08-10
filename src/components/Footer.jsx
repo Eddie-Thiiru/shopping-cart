@@ -39,9 +39,11 @@ const Footer = () => {
           <li>Refund Policy</li>
         </ul>
         <div className="footerCopyright">
-          <p>
-            <span>© </span> 2023 ultimateGames
-          </p>
+          <div>
+            <p>
+              <span>©</span> 2023 Game Vault
+            </p>
+          </div>
           <p>Developed By Eddie Thiiru</p>
         </div>
       </div>

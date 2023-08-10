@@ -6,7 +6,7 @@
 
 .collection {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 260px));
+  grid-template-columns: repeat(auto-fit, 260px);
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -14,15 +14,17 @@
 
 .gameCard {
   height: 380px;
+  border-radius: 5px;
+  /* background-color: #1f1f1f; */
   display: grid;
-  grid-template-rows: 4fr 1fr;
-  gap: 10px;
+  grid-template-rows: 300px 1fr;
+  justify-self: center;
 }
 
 .cardDescription {
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   pointer-events: none;
 }
 
@@ -33,6 +35,10 @@
 .gameCard img {
   min-height: 100%;
   max-width: 100%;
-  object-fit: cover;
+  border-radius: 5px;
   pointer-events: none;
+}
+
+.gameCard:hover {
+  filter: brightness(140%);
 }

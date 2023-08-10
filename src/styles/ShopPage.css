@@ -3,9 +3,11 @@
   display: grid;
   grid-template-columns: 100px 1fr 100px;
   grid-template-rows: 50px 1fr;
+  justify-items: center;
 }
 
 .pageTitle {
+  font-size: 1.5rem;
   align-self: center;
 }
 
@@ -24,9 +26,10 @@
 }
 
 .cartItemsContainer {
+  height: 100%;
   display: grid;
   grid-template-columns: minmax(450px, 1fr);
-  grid-template-rows: 50px minmax(50q0px, 1fr) 300px;
+  grid-template-rows: 50px minmax(500px, 1fr) 300px;
 }
 
 .cartHeader {
@@ -55,6 +58,9 @@
 }
 
 .cartItemWrapperTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-self: end;
 }
 
@@ -65,8 +71,30 @@
   gap: 10px;
 }
 
+.cartEmptyBtn {
+  width: 100px;
+}
+
+.removeGameBtn {
+  font-size: 0.875rem;
+  color: gray;
+  background-color: rgb(18, 18, 18);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.removeGameBtn svg {
+  width: 25px;
+}
+
 .cartItemWrapperOne img {
   height: 100px;
   max-height: 100%;
   max-width: 100%;
+}
+
+.removeGameBtn:hover {
+  color: #1f1f1f;
 }

@@ -17,17 +17,17 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 100px minmax(800px, 1fr) 400px;
+  grid-template-rows: 100px minmax(850px, 1fr) 500px;
 }
 
 .header {
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: rgb(18, 18, 18);
+  background-color: #121212;
   padding: 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 200px 1fr;
   align-items: center;
   gap: 20px;
   z-index: 1;
@@ -42,17 +42,22 @@
 
 .footer {
   width: 100%;
-  padding: 10px;
+  font-size: 0.875rem;
+  color: #c0c0c0;
+  padding: 40px 10px 10px 10px;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .nav {
+  font-size: 1.125rem;
   padding: 10px;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav > div {
@@ -60,24 +65,34 @@
 }
 
 .footer > div {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .footerAbout,
 .footerSocial,
 .footerPolicies {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .footerCopyright {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+}
+
+.footerCopyright div {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  padding: 5px;
 }
 
 h1 {
@@ -91,22 +106,35 @@ h1 {
 h1 span {
   font-family: auto-techno;
   font-size: 1.5rem;
-  color: white;
+  color: #ffffff;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: nexa-heavy, sans-serif;
+  padding: 5px;
 }
 
 .footer h2 {
   font-family: frostbite;
-  color: white;
   letter-spacing: 2px;
+}
+
+button {
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 10px;
 }
 
 ul {
   list-style: none;
+}
+
+li {
+  padding: 5px;
 }
 
 img {
@@ -114,7 +142,12 @@ img {
 }
 
 .apiHyperlink img {
-  height: 50px;
+  height: 40px;
+}
+
+svg {
+  height: 30px;
+  width: 30px;
 }
 
 a {
@@ -124,11 +157,16 @@ a {
 }
 
 .apiHyperlink a {
+  font-family: nexa-heavy, sans-serif;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 a:hover {
   color: #535bf2;
+}
+
+button:hover {
+  background-color: #cccccc;
 }

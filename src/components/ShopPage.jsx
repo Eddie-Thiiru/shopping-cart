@@ -15,13 +15,12 @@ const CartCard = ({ imageURL, title, price, id, handleDelete }) => {
       <div className="cartItemWrapperTwo">
         <p>{`$${price}`}</p>
         <div>
-          <RiDeleteBinLine />
           <button
             type="button"
-            className="removeGame"
+            className="removeGameBtn"
             onClick={() => handleDelete(id)}
           >
-            Remove
+            <RiDeleteBinLine />
           </button>
         </div>
       </div>

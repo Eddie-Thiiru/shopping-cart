@@ -11,11 +11,6 @@ import hollowImg from "../images/hollow-knight.png";
 import forzaImg from "../images/forza.svg";
 import "../styles/Homepage.css";
 
-// Add placeholder image before real image loads to prevent broken image
-// Add placeholder image before real image loads to prevent broken image
-// Add placeholder image before real image loads to prevent broken image
-// Add placeholder image before real image loads to prevent broken image
-
 const About = () => {
   return (
     <div className="aboutSection">
@@ -176,6 +171,15 @@ const Group = ({ children }) => {
 const Homepage = () => {
   const { redDeadRedemption2, gta5, witcher3, hollowKnight, forza5 } =
     useProductsData();
+
+  // const handleClick = (e) => {
+  //   const gameId = parseInt(e.target.id);
+  //   const gameData = getGameData(gameId);
+  //   const navigationName = gameData.data.slug;
+  //   console.log(navigationName);
+
+  //   navigate("/games/game", { state: gameData });
+  // };
 
   return (
     <div className="homepage">

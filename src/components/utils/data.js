@@ -152,7 +152,7 @@ const useData = (id) => {
       .catch(() => {
         setError(true);
       });
-  }, []);
+  }, [id]);
 
   return { data, error };
 };

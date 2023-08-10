@@ -49,7 +49,7 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, minmax(400px, 750px));
+  grid-template-columns: repeat(2, minmax(400px, 600px));
   justify-content: center;
   gap: 40px;
 }
@@ -190,7 +190,15 @@
   color: #ffffff;
 }
 
-.aboutTitle h2:nth-child(2),
+.aboutTitle h2:nth-child(2) {
+  font-size: 3.75rem;
+  font-weight: 800;
+  background: url(../images/neon.png) center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .groupSection h2 {
   font-size: 2.5rem;
 }
@@ -203,7 +211,7 @@
   height: 35px;
 }
 
-.adventureSection img {
+.rdrBackground {
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
@@ -218,6 +226,7 @@
   min-height: 100%;
   max-width: 100%;
   min-width: 100%;
+  border-radius: 10px;
 }
 
 .gta5Logo,

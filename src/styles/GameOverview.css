@@ -11,7 +11,6 @@
   grid-column: 1 / 2;
   display: grid;
   grid-template-rows: 430px 1fr 1fr;
-  /* grid-template-rows: minmax(450) minmax(150) minmax(150); */
   gap: 20px;
 }
 
@@ -71,6 +70,7 @@
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
+  border-radius: 5px;
 }
 
 .buyBtn:hover {

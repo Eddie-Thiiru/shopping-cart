@@ -17,7 +17,7 @@ const About = () => {
     <div className="aboutSection">
       <div className="aboutTitle">
         <h2>Explore</h2>
-        <h2>The Ultimate Game Store</h2>
+        <h2>THE ULTIMATE GAME STORE</h2>
       </div>
       <p>
         The world of video games is waiting for you to discover its wonders and
@@ -56,7 +56,7 @@ const Adventure = ({ background, id, handleClick }) => {
   return (
     <div className="adventureSection">
       <div className="sectionBackground">
-        <img src={background} alt="" />
+        <img className="rdrBackground" src={background} alt="" />
         <div className="adventureSecDescription">
           <img src={redDeadImg} alt="rdr 2 logo"></img>
           <p>

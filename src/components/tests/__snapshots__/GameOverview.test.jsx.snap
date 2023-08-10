@@ -5,6 +5,9 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
   <div
     class="gameOverview"
   >
+    <h2>
+      Game Overview
+    </h2>
     <div
       class="gameDetails"
     >
@@ -21,7 +24,7 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
         class="gameMeta"
       >
         <div
-          class="gameGenreScore"
+          class="gameMetaOne"
         >
           <div
             class="genre"
@@ -30,8 +33,8 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
               Genre
             </h4>
             <p>
-              Action 
-              Adventure 
+              Action, 
+              Adventure
                
             </p>
           </div>
@@ -47,23 +50,30 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
           </div>
         </div>
         <div
-          class="releaseDate"
+          class="gameMetaTwo"
         >
-          <h4>
-            Release Date
-          </h4>
-          <p>
-            march 15, 2013
-          </p>
-        </div>
-        <div
-          class="gamePlatforms"
-        >
-          <p>
-            PC 
-            PlayStation 
-            XBOX 
-          </p>
+          <div
+            class="gamePlatforms"
+          >
+            <h4>
+              Platforms
+            </h4>
+            <p>
+              PC, 
+              PlayStation, 
+              XBOX
+            </p>
+          </div>
+          <div
+            class="releaseDate"
+          >
+            <h4>
+              Release Date
+            </h4>
+            <p>
+              march 15, 2013
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -77,17 +87,19 @@ exports[`Game Overview > renders Overview while using useLocation data 1`] = `
         class="shopSection"
       >
         <p>
-          29.99
+          $29.99
         </p>
         <div
           class="cartBuy"
         >
           <button
+            class="addCartBtn"
             type="button"
           >
             ADD TO CART
           </button>
           <button
+            class="buyBtn"
             type="button"
           >
             BUY NOW

@@ -1,11 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import Homepage from "../Homepage";
 import { Context } from "../DataProvider";
-
-// test sections are rendered
-
-// test descriptions are rendered
 
 const data = {
   redDeadRedemption2: { data: { imageURL: "" } },
@@ -21,17 +18,14 @@ describe("Homepage", () => {
   it("should render all homepage sections", () => {
     render(
       <Context.Provider value={data}>
-        <Homepage />
+        <MemoryRouter>
+          <Homepage />
+        </MemoryRouter>
       </Context.Provider>,
     );
 
-    expect(screen.getByText(/welcome/i)).toBeInTheDocument();
-    expect(screen.getByText(/action-adventure games/i)).toBeInTheDocument();
-    expect(screen.getByText(/action games/i)).toBeInTheDocument();
-    expect(screen.getByText(/rpg games/i)).toBeInTheDocument();
-    expect(screen.getByText(/strategy games/i)).toBeInTheDocument();
-    expect(screen.getByText(/platform games/i)).toBeInTheDocument();
-    expect(screen.getByText(/racing games/i)).toBeInTheDocument();
-    expect(screen.getByText(/puzzle games/i)).toBeInTheDocument();
+    expect(screen.getByText(/the ultimate game store/i)).toBeInTheDocument();
+    expect(screen.getByText(/Experience the epic tale/i)).toBeInTheDocument();
+    expect(screen.getByText(/top sellers/i)).toBeInTheDocument();
   });
 });

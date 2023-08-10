@@ -42,25 +42,4 @@ describe("Shop page", () => {
       screen.getByRole("button", { name: "Continue to Payment" }),
     ).toBeInTheDocument();
   });
-
-  // it("should navigate to collection page on empty cart button click", async () => {
-  //   const user = userEvent.setup();
-  //   const cartData = [];
-
-  //   render(
-  //     <BrowserRouter>
-  //       <CartContext.Provider value={{ cartData }}>
-  //         <ShopPage />
-  //       </CartContext.Provider>
-  //     </BrowserRouter>,
-  //   );
-
-  //   const button = screen.getByRole("button", { name: "Buy Games" });
-
-  //   await user.click(button);
-
-  //   screen.debug();
-
-  //   expect(screen.getByText(/all games/i)).toBeInTheDocument();
-  // });
 });

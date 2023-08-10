@@ -5,9 +5,9 @@ exports[`renders a game card with data from a provider  1`] = `
   <div
     class="gamesCollection"
   >
-    <h1>
+    <h2>
       All Games
-    </h1>
+    </h2>
     <div
       class="collection"
     >

@@ -18,7 +18,7 @@ const additionalData = {
   },
   3498: {
     price: 29.99,
-    description:
+    story:
       "When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government, and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody — least of all each other.",
   },
   58175: {

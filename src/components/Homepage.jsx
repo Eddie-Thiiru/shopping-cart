@@ -257,31 +257,31 @@ const Homepage = () => {
 
 Adventure.propTypes = {
   background: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   handleClick: PropTypes.func,
 };
 
 Action.propTypes = {
   background: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   handleClick: PropTypes.func,
 };
 
 RPG.propTypes = {
   background: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   handleClick: PropTypes.func,
 };
 
 Platform.propTypes = {
   background: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   handleClick: PropTypes.func,
 };
 
 Racing.propTypes = {
   background: PropTypes.string,
-  id: PropTypes.number,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   handleClick: PropTypes.func,
 };
 

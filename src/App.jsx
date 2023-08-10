@@ -1,4 +1,5 @@
 import { useState, createContext } from "react";
+import { ScrollRestoration } from "react-router-dom";
 import Header from "./components/Header";
 import MainSection from "./components/MainSection";
 import Footer from "./components/Footer";
@@ -57,6 +58,14 @@ const App = () => {
         </CartContext.Provider>
       </DataProvider>
       <Footer />
+      <ScrollRestoration
+        getKey={(location) => {
+          const paths = ["games/:name"];
+          return paths.includes(location.pathname)
+            ? location.pathname
+            : location.key;
+        }}
+      />
     </div>
   );
 };

@@ -3,8 +3,6 @@ import App from "../App";
 import Homepage from "./Homepage";
 import ProductsPage from "./ProductsPage";
 import ShopPage from "./ShopPage";
-import Collection from "./GamesCollection";
-import Overview from "./GameOverview";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -15,12 +13,8 @@ const Router = () => {
         { index: true, element: <Homepage /> },
         { path: "home", element: <Homepage /> },
         {
-          path: "games",
+          path: "games/:name",
           element: <ProductsPage />,
-          children: [
-            { path: "collection", element: <Collection /> },
-            { path: "game", element: <Overview /> },
-          ],
         },
         { path: "cart", element: <ShopPage /> },
       ],

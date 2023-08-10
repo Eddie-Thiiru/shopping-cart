@@ -33,9 +33,8 @@ const Collection = () => {
     const gameId = parseInt(e.target.id);
     const gameData = getGameData(gameId);
     const navigationName = gameData.data.slug;
-    console.log(navigationName);
 
-    navigate("/games/game", { state: gameData });
+    navigate(`/games/${navigationName}`, { state: gameData });
   };
 
   return (

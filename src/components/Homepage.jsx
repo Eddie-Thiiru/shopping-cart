@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import { useProductsData } from "./utils/dataContext";
 import nintendoImg from "../images/nintendo.svg";
 import playstationImg from "../images/playstation.svg";
@@ -51,7 +52,7 @@ const About = () => {
   );
 };
 
-const Adventure = ({ background }) => {
+const Adventure = ({ background, id, handleClick }) => {
   return (
     <div className="adventureSection">
       <div className="sectionBackground">
@@ -65,7 +66,12 @@ const Adventure = ({ background }) => {
           </p>
           <div>
             <p>Starting at $59.99</p>
-            <button type="button" className="adventureSectionBtn">
+            <button
+              type="button"
+              id={id}
+              className="adventureSectionBtn"
+              onClick={handleClick}
+            >
               BUY NOW
             </button>
           </div>
@@ -75,7 +81,7 @@ const Adventure = ({ background }) => {
   );
 };
 
-const Action = ({ background }) => {
+const Action = ({ background, id, handleClick }) => {
   return (
     <div className="actionSection">
       <div className="sectionBackground">
@@ -84,7 +90,12 @@ const Action = ({ background }) => {
           <img className="gta5Logo" src={gtaImg} alt="gta 5 logo"></img>
           <div>
             <p>$29.99</p>
-            <button type="button" className="actionSectionBtn">
+            <button
+              type="button"
+              id={id}
+              className="actionSectionBtn"
+              onClick={handleClick}
+            >
               BUY NOW
             </button>
           </div>
@@ -94,7 +105,7 @@ const Action = ({ background }) => {
   );
 };
 
-const RPG = ({ background }) => {
+const RPG = ({ background, id, handleClick }) => {
   return (
     <div className="rpgSection">
       <div className="sectionBackground">
@@ -107,7 +118,12 @@ const RPG = ({ background }) => {
           ></img>
           <div>
             <p>$49.99</p>
-            <button type="button" className="rpgSectionBtn">
+            <button
+              type="button"
+              id={id}
+              className="rpgSectionBtn"
+              onClick={handleClick}
+            >
               BUY NOW
             </button>
           </div>
@@ -117,7 +133,7 @@ const RPG = ({ background }) => {
   );
 };
 
-const Platform = ({ background }) => {
+const Platform = ({ background, id, handleClick }) => {
   return (
     <div className="platformSection">
       <div className="sectionBackground">
@@ -130,7 +146,12 @@ const Platform = ({ background }) => {
           ></img>
           <div>
             <p>$29.99</p>
-            <button type="button" className="platformSectionBtn">
+            <button
+              type="button"
+              id={id}
+              className="platformSectionBtn"
+              onClick={handleClick}
+            >
               BUY NOW
             </button>
           </div>
@@ -140,7 +161,7 @@ const Platform = ({ background }) => {
   );
 };
 
-const Racing = ({ background }) => {
+const Racing = ({ background, id, handleClick }) => {
   return (
     <div className="racingSection">
       <div className="sectionBackground">
@@ -149,7 +170,12 @@ const Racing = ({ background }) => {
           <img className="forzaLogo" src={forzaImg} alt="forza 5 logo"></img>
           <div>
             <p>$59.99</p>
-            <button type="button" className="forzaSectionBtn">
+            <button
+              type="button"
+              id={id}
+              className="forzaSectionBtn"
+              onClick={handleClick}
+            >
               BUY NOW
             </button>
           </div>
@@ -169,30 +195,61 @@ const Group = ({ children }) => {
 };
 
 const Homepage = () => {
+  const navigate = useNavigate();
   const { redDeadRedemption2, gta5, witcher3, hollowKnight, forza5 } =
     useProductsData();
+  const array = [redDeadRedemption2, gta5, witcher3, hollowKnight, forza5];
 
-  // const handleClick = (e) => {
-  //   const gameId = parseInt(e.target.id);
-  //   const gameData = getGameData(gameId);
-  //   const navigationName = gameData.data.slug;
-  //   console.log(navigationName);
+  const getGameData = (id) => {
+    for (let i = 0; i < array.length; i++) {
+      const obj = array[i];
+      if (obj.data.uniqueId === id) {
+        return obj;
+      }
+    }
+  };
 
-  //   navigate("/games/game", { state: gameData });
-  // };
+  const handleClick = (e) => {
+    const gameId = parseInt(e.target.id);
+    const gameData = getGameData(gameId);
+    const navigationName = gameData.data.slug;
+
+    navigate(`/games/${navigationName}`, { state: gameData });
+  };
 
   return (
     <div className="homepage">
       <About />
-      <Adventure background={redDeadRedemption2.data.imageURL} />
+      <Adventure
+        background={redDeadRedemption2.data.imageURL}
+        id={redDeadRedemption2.data.uniqueId}
+        handleClick={handleClick}
+      />
       <Group>
-        <Action background={gta5.data.imageURL} title={gta5.data.name} />
-        <RPG background={witcher3.data.imageURL} title={witcher3.data.name} />
+        <Action
+          background={gta5.data.imageURL}
+          title={gta5.data.name}
+          id={gta5.data.uniqueId}
+          handleClick={handleClick}
+        />
+        <RPG
+          background={witcher3.data.imageURL}
+          title={witcher3.data.name}
+          id={witcher3.data.uniqueId}
+          handleClick={handleClick}
+        />
         <Platform
           background={hollowKnight.data.imageURL}
           title={hollowKnight.data.name}
+          id={hollowKnight.data.uniqueId}
+          handleClick={handleClick}
         />
-        <Racing background={forza5.data.imageURL} title={forza5.data.name} />
+        <Racing
+          background={forza5.data.imageURL}
+          title={forza5.data.name}
+          id={forza5.data.uniqueId}
+          handleClick={handleClick}
+        />
       </Group>
     </div>
   );
@@ -200,22 +257,32 @@ const Homepage = () => {
 
 Adventure.propTypes = {
   background: PropTypes.string,
+  id: PropTypes.number,
+  handleClick: PropTypes.func,
 };
 
 Action.propTypes = {
   background: PropTypes.string,
+  id: PropTypes.number,
+  handleClick: PropTypes.func,
 };
 
 RPG.propTypes = {
   background: PropTypes.string,
+  id: PropTypes.number,
+  handleClick: PropTypes.func,
 };
 
 Platform.propTypes = {
   background: PropTypes.string,
+  id: PropTypes.number,
+  handleClick: PropTypes.func,
 };
 
 Racing.propTypes = {
   background: PropTypes.string,
+  id: PropTypes.number,
+  handleClick: PropTypes.func,
 };
 
 Group.propTypes = {

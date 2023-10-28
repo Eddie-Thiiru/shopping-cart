@@ -17,7 +17,7 @@
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-rows: 100px minmax(850px, 1fr) 500px;
+  grid-template-rows: 100px minmax(800px, 1fr) 400px;
 }
 
 .header {
@@ -27,7 +27,7 @@
   background-color: #121212;
   padding: 10px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 150px 1fr;
   align-items: center;
   gap: 20px;
   z-index: 1;
@@ -57,7 +57,7 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .nav > div {
@@ -127,6 +127,7 @@ button {
   border-radius: 5px;
   font-weight: 600;
   padding: 10px;
+  cursor: pointer;
 }
 
 ul {
@@ -156,6 +157,15 @@ a {
   text-decoration: inherit;
 }
 
+.cartLink {
+  position: relative;
+}
+
+.cartLink span {
+  position: absolute;
+  bottom: 0px;
+}
+
 .apiHyperlink a {
   font-family: nexa-heavy, sans-serif;
   font-size: 1.5rem;
@@ -169,4 +179,16 @@ a:hover {
 
 button:hover {
   background-color: #cccccc;
+}
+
+@media (max-width: 500px) {
+  .footerAbout,
+  .footerSocial,
+  .footerPolicies {
+    gap: 20px;
+  }
+
+  li {
+    font-size: 0.75rem;
+  }
 }

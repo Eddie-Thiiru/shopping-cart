@@ -15,7 +15,6 @@
 .gameCard {
   height: 380px;
   border-radius: 5px;
-  /* background-color: #1f1f1f; */
   display: grid;
   grid-template-rows: 300px 1fr;
   justify-self: center;
@@ -32,6 +31,10 @@
   height: 80px;
 }
 
+.cardDescription p {
+  padding: 5px 0px;
+}
+
 .gameCard img {
   min-height: 100%;
   max-width: 100%;
@@ -41,4 +44,22 @@
 
 .gameCard:hover {
   filter: brightness(140%);
+}
+
+@media (max-width: 500px) {
+  .collection {
+    grid-template-columns: repeat(auto-fit, 200px);
+  }
+
+  .gameCard {
+    height: 280px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    justify-self: center;
+  }
+
+  .cardDescription p {
+    font-size: 0.875rem;
+  }
 }

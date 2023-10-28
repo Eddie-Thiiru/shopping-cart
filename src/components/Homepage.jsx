@@ -57,25 +57,27 @@ const Adventure = ({ background, id, handleClick }) => {
     <div className="adventureSection">
       <div className="sectionBackground">
         <img className="rdrBackground" src={background} alt="" />
-        <div className="adventureSecDescription">
-          <img src={redDeadImg} alt="rdr 2 logo"></img>
-          <p>
-            Experience the epic tale of outlaw Arthur Morgan and the infamous
-            Van der Linde gang, on the run across America at the dawn of the
-            modern age.
-          </p>
-          <div>
-            <p>Starting at $59.99</p>
-            <button
-              type="button"
-              id={id}
-              className="adventureSectionBtn"
-              onClick={handleClick}
-            >
-              BUY NOW
-            </button>
+        {background !== "" && (
+          <div className="adventureSecDescription">
+            <img src={redDeadImg} alt="rdr 2 logo"></img>
+            <p>
+              Experience the epic tale of outlaw Arthur Morgan and the infamous
+              Van der Linde gang, on the run across America at the dawn of the
+              modern age.
+            </p>
+            <div>
+              <p>Starting at $59.99</p>
+              <button
+                type="button"
+                id={id}
+                className="adventureSectionBtn"
+                onClick={handleClick}
+              >
+                BUY NOW
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -86,20 +88,22 @@ const Action = ({ background, id, handleClick }) => {
     <div className="actionSection">
       <div className="sectionBackground">
         <img className="gta5Background" src={background} alt="" />
-        <div className="sectionDescription">
-          <img className="gta5Logo" src={gtaImg} alt="gta 5 logo"></img>
-          <div>
-            <p>$29.99</p>
-            <button
-              type="button"
-              id={id}
-              className="actionSectionBtn"
-              onClick={handleClick}
-            >
-              BUY NOW
-            </button>
+        {background !== "" && (
+          <div className="sectionDescription">
+            <img className="gta5Logo" src={gtaImg} alt="gta 5 logo"></img>
+            <div>
+              <p>$29.99</p>
+              <button
+                type="button"
+                id={id}
+                className="actionSectionBtn"
+                onClick={handleClick}
+              >
+                BUY NOW
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -110,24 +114,26 @@ const RPG = ({ background, id, handleClick }) => {
     <div className="rpgSection">
       <div className="sectionBackground">
         <img className="witcherBackground" src={background} alt="" />
-        <div className="sectionDescription">
-          <img
-            className="witcherLogo"
-            src={witcherImg}
-            alt="witcher 3 logo"
-          ></img>
-          <div>
-            <p>$49.99</p>
-            <button
-              type="button"
-              id={id}
-              className="rpgSectionBtn"
-              onClick={handleClick}
-            >
-              BUY NOW
-            </button>
+        {background !== "" && (
+          <div className="sectionDescription">
+            <img
+              className="witcherLogo"
+              src={witcherImg}
+              alt="witcher 3 logo"
+            ></img>
+            <div>
+              <p>$49.99</p>
+              <button
+                type="button"
+                id={id}
+                className="rpgSectionBtn"
+                onClick={handleClick}
+              >
+                BUY NOW
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -138,24 +144,26 @@ const Platform = ({ background, id, handleClick }) => {
     <div className="platformSection">
       <div className="sectionBackground">
         <img className="hollowKnightBackground" src={background} alt="" />
-        <div className="sectionDescription">
-          <img
-            className="hollowKnightLogo"
-            src={hollowImg}
-            alt="hollow knight logo"
-          ></img>
-          <div>
-            <p>$29.99</p>
-            <button
-              type="button"
-              id={id}
-              className="platformSectionBtn"
-              onClick={handleClick}
-            >
-              BUY NOW
-            </button>
+        {background !== "" && (
+          <div className="sectionDescription">
+            <img
+              className="hollowKnightLogo"
+              src={hollowImg}
+              alt="hollow knight logo"
+            ></img>
+            <div>
+              <p>$29.99</p>
+              <button
+                type="button"
+                id={id}
+                className="platformSectionBtn"
+                onClick={handleClick}
+              >
+                BUY NOW
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
@@ -166,20 +174,22 @@ const Racing = ({ background, id, handleClick }) => {
     <div className="racingSection">
       <div className="sectionBackground">
         <img className="forzaBackground" src={background} alt="" />
-        <div className="sectionDescription">
-          <img className="forzaLogo" src={forzaImg} alt="forza 5 logo"></img>
-          <div>
-            <p>$59.99</p>
-            <button
-              type="button"
-              id={id}
-              className="forzaSectionBtn"
-              onClick={handleClick}
-            >
-              BUY NOW
-            </button>
+        {background !== "" && (
+          <div className="sectionDescription">
+            <img className="forzaLogo" src={forzaImg} alt="forza 5 logo"></img>
+            <div>
+              <p>$59.99</p>
+              <button
+                type="button"
+                id={id}
+                className="forzaSectionBtn"
+                onClick={handleClick}
+              >
+                BUY NOW
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

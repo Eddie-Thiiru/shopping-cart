@@ -13,7 +13,7 @@ const Header = ({ cartItemsCount }) => {
         <Link to="home">Home</Link>
         <Link to="games/collection">Browse</Link>
         <div>
-          <Link to="cart">
+          <Link to="cart" className="cartLink">
             <PiHandbag size={"25px"} />
             <span>{cartItemsCount}</span>
           </Link>

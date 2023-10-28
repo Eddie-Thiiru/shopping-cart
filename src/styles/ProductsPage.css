@@ -8,3 +8,13 @@
 .productsPage > div {
   grid-column: 2 / 3;
 }
+
+@media (max-width: 800px) {
+  .productsPage {
+    display: flex;
+  }
+
+  .gamesCollection {
+    justify-items: center;
+  }
+}

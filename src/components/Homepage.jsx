@@ -11,6 +11,7 @@ import witcherImg from "../images/witcher-3.png";
 import hollowImg from "../images/hollow-knight.png";
 import forzaImg from "../images/forza.svg";
 import "../styles/Homepage.css";
+import { useState } from "react";
 
 const About = () => {
   return (
@@ -53,11 +54,18 @@ const About = () => {
 };
 
 const Adventure = ({ background, id, handleClick }) => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="adventureSection">
       <div className="sectionBackground">
-        <img className="rdrBackground" src={background} alt="" />
-        {background !== "" && (
+        <img
+          className="rdrBackground"
+          src={background}
+          alt=""
+          onLoad={() => setLoading(false)}
+        />
+        {loading === false && (
           <div className="adventureSecDescription">
             <img src={redDeadImg} alt="rdr 2 logo"></img>
             <p>
